@@ -35,7 +35,17 @@ const HeaderComponent = () => {
     });
   };
   const fetchUserDetails = async () => {
-    const data = await fetch(`http://localhost:3000/api/userinfo`);
+    let apiUrl;
+
+    if (process.env.NODE_ENV === 'development') {
+      apiUrl = 'http://localhost:3000';
+    } else {
+      apiUrl =
+        process.env.NEXT_PUBLIC_API_URL ||
+        'https://til-nextjs-training.vercel.app';
+    }
+
+    const data = await fetch(`${apiUrl}/api/userinfo`);
     const resData = await data.json();
     dispatch({
       type: 'LOGIN_SUCCESS',
