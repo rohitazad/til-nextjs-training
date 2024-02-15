@@ -1,4 +1,4 @@
-import ListItemShow from '@/components/ListitemShow';
+import ListItemShow from '../../components/ListItemShow';
 
 const BlogsPageContainer = async () => {
   const fetchPostData = async () => {
