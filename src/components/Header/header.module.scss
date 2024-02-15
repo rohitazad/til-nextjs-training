@@ -1,0 +1,22 @@
+.header{
+    background: #000000;
+    color:#ffffff;
+    display:flex;
+    justify-content: space-between;
+    padding:30px 15px;
+    a{
+        text-decoration: none;
+        color:#fff;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        li{
+            margin:0;
+            padding:0 10px;
+        }
+    }
+}
+.signIn{
+    cursor: pointer;
+}
