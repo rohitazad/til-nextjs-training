@@ -13,7 +13,7 @@ const BlogsPageContainer = async () => {
       <h1>Hello im Blogs Page</h1>
       {postData && postData.posts && postData.posts.length > 0
         ? postData.posts.map((item) => {
-            return <ListItemShow data={item} />;
+            return <ListItemShow key={item.id} data={item} />;
           })
         : 'No data Found'}
     </div>

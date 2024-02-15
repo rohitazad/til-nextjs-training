@@ -38,7 +38,7 @@ const BlogDetails = async ({ searchParams, params }) => {
       <div className={styles.tags}>
         {blgoData.tags && blgoData.tags.length > 0
           ? blgoData.tags.map((item) => {
-              return <span>{item}</span>;
+              return <span key={item}>{item}</span>;
             })
           : ''}
       </div>
